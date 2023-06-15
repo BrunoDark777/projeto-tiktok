@@ -1,5 +1,9 @@
+html{
+  scroll-snap-type: y mandatory;
+}
+
 .App{
-  background-color: aqua;
+  background-color: black;
   height: 100vh;
   display: grid;
   place-items: center;
@@ -13,4 +17,20 @@
   max-width: 500px;
   border: 1px solid black;
   border-radius: 20px;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+  position: relative;
+}
+
+/* Esconde o scroll no Chrome e no Opera */
+
+.app__videos::-webkit-scrollbar{
+  display: none;
+}
+
+/* Esconde o scrollbar no internet explore, Edge e Firefox */
+
+.app__videos{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
